@@ -19,7 +19,14 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log('True');
+}
+else {
+  console.log(false);
+}
 
 
 /*
@@ -34,9 +41,12 @@ Do the following:
    HINT: no function required
 */
 
+let firstThing = 0;
+let secondThing = 1;
 
-
-
+ if (firstThing < secondThing) { 
+  console.log('True');
+ }
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -48,8 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let myValue = "1999";
 
-
+console.log(parseInt(myValue));
 
 
 /*
@@ -61,8 +72,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
 
 
@@ -76,10 +87,9 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+function dogYears(age){
+  return age * 7;
+ }
 
 
 
@@ -132,6 +142,27 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 function hungryDog(/*add your code here*/){
   /*add your code here*/
 }
+function hungryDog(age,weight) {
+  if (age>=1) {
+    if (weight >= 5)
+    return weight * 0.05;
+    if (weight <= 10 && weight >= 6)
+    return weight * 0.04;
+    if (weight >= 11 && weight <= 15)
+    return weight * 0.03
+    if (weight >151)
+    return weight * 0.02
+  }
+  else {
+    if (age < .333)
+    return weight * 0.10
+    if (age >= .333 && age <= 0.583)
+    return weight * 0.05
+    if (age >= 0.583 && age < 1)
+    return weight * 0.04
+  }
+  console.log(hungryDog(4, 12));
+}
 
 
 
@@ -160,7 +191,33 @@ function game(user, computer){
   /*add your code here*/
 }
 
-
+let computer = Math.random
+function game(user, computer){
+  if (computer <= 0.33)
+  computer = 'rock';
+  else if (computer <= 0.67)
+  computer = 'paper';
+  else if (computer > .67)
+  computer = 'scissors'
+  function game(user, computer) {
+    if (user === computer) {
+      return "it's a tie";
+    }
+    else if (user === 'rock' && computer === 'scissors'){
+      return 'you win';
+    }
+    else if (user === 'scissors' && computer === 'paper') {
+      return 'you win';
+    }
+    else if (user === 'paper' && computer === 'rock') {
+      return 'you win';
+    }
+    else {
+      return "you lose";
+    }
+  }
+}
+console.log(game('paper', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -176,6 +233,10 @@ Using the miles function below do the following:
 function miles(/*add your code here*/){
   /*add your code here*/
 }
+function miles(kilometers){
+return kilometers * 0.621371;
+}
+console.log(miles(12));
 
 
 
@@ -190,7 +251,11 @@ Using the feet function below do the following:
 function feet(/*add your code here*/){
   /*add your code here*/
 }
+function feet(Centimeters){
+  return Centimeters / 30.48;
 
+}
+console.log(feet(1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -209,6 +274,11 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(/*add your code here*/){
       /*add your code here*/
+}
+function annoyingSong(number) {
+  for (let i = number; i > 0; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+  }
 }
 
 
@@ -230,7 +300,24 @@ Using the grade function below do the following:
 function grade(/*Your Code here */){
 /*Your Code here */
 }
+function grade(score) {
+  if (score >= 90)
+    return "you got an A";
 
+  if (score >= 80)
+    return "you got a B";
+
+  if (score >= 70)
+    return "you got a C";
+
+  if (score >= 60)
+    return "you got a D";
+
+  else
+    return "you got an F";
+
+}
+console.log(grade(35));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
